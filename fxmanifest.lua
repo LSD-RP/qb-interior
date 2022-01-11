@@ -14,6 +14,13 @@ client_scripts {
 files {
 	'stream/defaultshells/shellprops.ytyp',
 	'stream/startingapt/shellpropsv11.ytyp',
+	'stream/deluxehousingShells/stream/shellpropsv2/ytyp',
+	'stream/FurnishedStashhousesShells/stream/shellpropsv15.ytyp',
+	'stream/mediumShells/stream/shellpropsv10.ytyp',
+	'stream/modernhousingpack/stream/shellpropsv12.ytyp',
+	'stream/shellsunlocked/stream/shellprops.ytyp',
+	'stream/V2highendShells/stream/shellpropsv9.ytyp',
+	'stream/whiteshell/stream/white_shell.ytyp',
 	-- 'stream/ClassicHouseShells/shellpropsv19.ytyp',
 	-- 'stream/DeluxeHousingShells/shellpropsv2.ytyp',
 	-- 'stream/FurnishedHousingShells/shellpropsv11.ytyp',
@@ -39,6 +46,13 @@ files {
 data_file 'DLC_ITYP_REQUEST' 'stream/defaultshells/shellprops.ytyp'
 data_file 'DLC_ITYP_REQUEST' 'stream/startingapt/shellpropsv11.ytyp'
 -- Classic
+data_file 'DLC_ITYP_REQUEST' 'stream/deluxehousingShells/stream/shellpropsv2/ytyp'
+data_file 'DLC_ITYP_REQUEST' 'stream/FurnishedStashhousesShells/stream/shellpropsv15.ytyp'
+data_file 'DLC_ITYP_REQUEST' 'stream/mediumShells/stream/shellpropsv10.ytyp'
+data_file 'DLC_ITYP_REQUEST' 'stream/modernhousingpack/stream/shellpropsv12.ytyp'
+data_file 'DLC_ITYP_REQUEST' 'stream/shellsunlocked/stream/shellprops.ytyp'
+data_file 'DLC_ITYP_REQUEST' 'stream/V2highendShells/stream/shellpropsv9.ytyp'
+data_file 'DLC_ITYP_REQUEST' 'stream/whiteshell/stream/white_shell.ytyp'
 -- data_file 'DLC_ITYP_REQUEST' 'stream/ClassicHouseShells/shellpropsv19.ytyp'
 -- -- Deluxe
 -- data_file 'DLC_ITYP_REQUEST' 'stream/DeluxeHousingShells/shellpropsv2.ytyp'
