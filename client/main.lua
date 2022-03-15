@@ -973,16 +973,82 @@ local function CreateHouse_weedPropWarehouse(spawn) -- BIG warehouse for weed WI
     return { objects, POIOffsets }
 end
 
+local function CreateContainer(spawn)
+	local objects = {}
+    local POIOffsets = {}
+	POIOffsets.exit = json.decode('{"x": 0.08, "y": -5.73, "z": 1.24, "h": 359.32}')
+	DoScreenFadeOut(500)
+    while not IsScreenFadedOut() do
+        Wait(10)
+    end
+	RequestModel(`container_shell`)
+	while not HasModelLoaded(`container_shell`) do
+	    Wait(1000)
+	end
+	local house = CreateObject(`container_shell`, spawn.x, spawn.y, spawn.z, false, false, false)
+    FreezeEntityPosition(house, true)
+    objects[#objects+1] = house
+	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
+    return { objects, POIOffsets }
+end
+
+local function CreateFurniMotelModern(spawn)
+	local objects = {}
+    local POIOffsets = {}
+	POIOffsets.exit = json.decode('{"x": 4.98, "y": 4.35, "z": 1.16, "h": 179.79}')
+	DoScreenFadeOut(500)
+    while not IsScreenFadedOut() do
+        Wait(10)
+    end
+	RequestModel(`modernhotel_shell`)
+	while not HasModelLoaded(`modernhotel_shell`) do
+	    Wait(1000)
+	end
+	local house = CreateObject(`modernhotel_shell`, spawn.x, spawn.y, spawn.z, false, false, false)
+    FreezeEntityPosition(house, true)
+    objects[#objects+1] = house
+	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
+    return { objects, POIOffsets }
+end
+
+local function CreateFurniMotelStandard(spawn)
+	local objects = {}
+    local POIOffsets = {}
+	POIOffsets.exit = json.decode('{"x": -0.43, "y": -2.51, "z": 1.0, "h": 271.29}')
+	DoScreenFadeOut(500)
+    while not IsScreenFadedOut() do
+        Wait(10)
+    end
+	RequestModel(`standardmotel_shell`)
+	while not HasModelLoaded(`standardmotel_shell`) do
+	    Wait(1000)
+	end
+	local house = CreateObject(`standardmotel_shell`, spawn.x, spawn.y, spawn.z, false, false, false)
+    FreezeEntityPosition(house, true)
+    objects[#objects+1] = house
+	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
+    return { objects, POIOffsets }
+end
+
 -- Exports
 
+exports('CreateStore1', CreateStore1)
+exports('CreateOffice1', CreateOffice1)
+exports('CreateMichael', CreateMichael)
+exports('CreateFurniMid', CreateFurniMid)
+exports('CreateGarageMed', CreateGarageMed)
 exports('DespawnInterior', DespawnInterior)
+exports('CreateContainer', CreateContainer)
+exports('CreateWarehouse1', CreateWarehouse1)
 exports('CreateRanchShell', CreateRanchShell)
 exports('CreateTier1House', CreateTier1House)
 exports('CreateLesterShell', CreateLesterShell)
 exports('CreateHouseRobbery', CreateHouseRobbery)
 exports('CreateTrevorsShell', CreateTrevorsShell)
 exports('CreateCaravanShell', CreateCaravanShell)
+exports('CreateFranklinAunt', CreateFranklinAunt)
 exports('CreateApartmentShell', CreateApartmentShell)
+exports('CreateFurniMotelModern', CreateFurniMotelModern)
 exports('CreateApartmentFurnished', CreateApartmentFurnished)
 exports('CreateHouseMedium3', CreateHouse_shellmedium3)
 exports('CreateHouseLester', CreateHouse_shelllester)
@@ -1023,3 +1089,5 @@ exports('CreateHouseBiggerWarehouse', CreateHouse_biggerWarehouse)
 exports('CreateHouseShitWarehouse', CreateHouse_shitWarehouse)
 exports('CreateHouseHugeWarehouse', CreateHouse_hugeWarehouse)
 exports('CreateHouseWeedPrefilledWarehouse', CreateHouse_weedPropWarehouse)
+exports('CreateContainer', CreateContainer)
+exports('CreateFurniMotelStandard', CreateFurniMotelStandard)
